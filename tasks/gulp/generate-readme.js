@@ -34,7 +34,7 @@ gulp.task('generate:readme', () => {
       objectData.componentPath = objectData.componentName
       try {
         let componentPath = path.join(configPath.components, objectData.componentName, `${objectData.componentName}.yaml`)
-        let componentData = yaml.safeLoad(fs.readFileSync(componentPath, 'utf8'), {json: true})
+        let componentData = yaml.safeLoad(fs.readFileSync(componentPath, 'utf8'), { json: true })
         objectData.componentData = componentData
         return componentData
       } catch (e) {
